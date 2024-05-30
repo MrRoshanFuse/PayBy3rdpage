@@ -59,7 +59,7 @@ input:focus{
         border: 1px solid #2469e9;
        }      
 input {
-        width: 45px;
+        width: 60px;
         height: 45px;
         border-radius: 14px;
         border: 1px solid rgb(249, 73, 73);
@@ -70,7 +70,7 @@ input {
     
       }
 .otpInput{
-      	margin:16px 0px 0px 0px ;
+      	margin:16px 0px 16px 0px ;
         text-align:center;
       }
       input[type="text"]:focus {
@@ -93,7 +93,7 @@ input {
         color: #f5f6f7;
         background-color: #377AF6;
         border :none;
-        height:2.3em;
+        height:56px;
         padding:10px 15px;
         bottom: 16px;
         left: 3%;
@@ -115,6 +115,7 @@ input {
            background: none;          
            border: none;          
            font-size: 35px;
+           color:#000;
            cursor: pointer;
            outline: inherit;
            visibility: visible !important;
@@ -132,7 +133,46 @@ input {
        
     }
 /* ADDED ON 08SEP22 BY MAMTA TOP LOGO */
-
+@media screen and (max-width:3000px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:2300px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1900px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1500px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1100px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
 
 @media screen and (max-width:1050px) {
         .logoLeft {
@@ -142,7 +182,6 @@ input {
             height: 30px;
         }
     }
-
 @media screen and (max-width:750px) {
         .logoLeft {
             height: 35px;
@@ -330,7 +369,22 @@ input {
 	margin:16px 0px 0px 0px;
    	text-align: center;	
    	}	
-    </style>   
+    </style>  
+    
+<script>
+function moveToNext(currentInput, nextInputId) {
+    // Get the value of the current input
+    var inputValue = currentInput.value;
+    
+    // Move to the next input field if the current input is not empty
+    
+      if (nextInputId) {
+        var nextInput = document.getElementById(nextInputId);
+        nextInput.disabled = false;
+        nextInput.focus();
+      }
+    }
+</script> 
  </head>
 <body onload="body(); f1()" class="content">  
  <form name="form1" action="%%RESPONSEURL%%"  method ="post"> 
