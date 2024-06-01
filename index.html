@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +9,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta name="description" content="MasterCard SecureCode">
-        	<link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        	<link href="enc/bootstrap.min.css" rel="stylesheet">
     <title>PAYBY</title>
     <script type="text/javascript" src="enc/PayBy.js"></script> 
     <script language="javascript" type="text/javascript" src="enc/jquery.min.js"></script>
@@ -55,7 +54,7 @@ body{
         font-family: 'SF Pro';
       }
 input:focus{
-        background-color:#e6f0f8;
+background-color: #bbdaff26;
         border: 1px solid #2469e9;
        }      
 input {
@@ -72,6 +71,7 @@ input {
 .otpInput{
       	margin:16px 0px 16px 0px ;
         text-align:center;
+
       }
       input[type="text"]:focus {
         border: 1px solid lightseagreen;
@@ -85,21 +85,26 @@ input {
         margin-top: 24px;
         position: relative;
       }
+      
 .btn {   
-        width: 94%;
-        font-size: 1.2em;
+         width: 94%;
+        font-size:1.2em;
         border-radius:10px;  
         position:fixed;
         color: #f5f6f7;
         background-color: #377AF6;
         border :none;
-        height:56px;
-        padding:10px 15px;
-        bottom: 16px;
+
         left: 3%;
         right: 3%;
+        height: 56px;
+	padding: 16px;
+	align-items: center;
+	align-self: stretch;
+        bottom: 16px;
         font-family:'SF Pro';
       }
+      
 #timer {
         color: #007bff;
       }
@@ -133,6 +138,7 @@ input {
        
     }
 /* ADDED ON 08SEP22 BY MAMTA TOP LOGO */
+
 @media screen and (max-width:3000px) {
         .logoLeft {
             height: 25px;
@@ -173,7 +179,6 @@ input {
             height: 25px;
         }
     }
-
 @media screen and (max-width:1050px) {
         .logoLeft {
             height: 30px;
@@ -182,6 +187,7 @@ input {
             height: 30px;
         }
     }
+
 @media screen and (max-width:750px) {
         .logoLeft {
             height: 35px;
@@ -244,8 +250,7 @@ input {
             
         }
     }
-
-   /*Media Query added on 29SEP23 by mamta for Input box */
+    /*Media Query added on 29SEP23 by mamta for Input box */
     .mar{
     	  margin-right:6px;
     }
@@ -273,8 +278,7 @@ input {
         margin-right:3px;
         }
         
-    }      
-    
+    }    
     
 @media screen and (max-width:350px) {
         input {
@@ -288,7 +292,6 @@ input {
         }
         
     }
-     
     @media screen and (max-width:300px) {
         input {
             width: 28px;
@@ -324,7 +327,7 @@ input {
         {
         margin-right:1px;
         }
-    }  
+    }
 #arrow{
       width: 19px;
     }   
@@ -371,7 +374,7 @@ input {
 	margin:16px 0px 0px 0px;
    	text-align: center;	
    	}	
-    </style>  
+    </style> 
     
 <script>
 function moveToNext(currentInput, nextInputId) {
@@ -386,7 +389,7 @@ function moveToNext(currentInput, nextInputId) {
         nextInput.focus();
       }
     }
-</script> 
+</script>  
  </head>
 <body onload="body(); f1()" class="content">  
  <form name="form1" action="%%RESPONSEURL%%"  method ="post"> 
@@ -409,22 +412,12 @@ function moveToNext(currentInput, nextInputId) {
          <p> OTP has been sent to the registered mobile number <span style="font-weight: 600;color: var(--gray-gray-7-primary, #2A2B2F);">XXXXXX%%MOBILE%%</span> and valid for 5 minutes.</p>
         </div>            
          <div class="otpInput">
-         <!-- <input onclick="clickOnOtp()"  id="in" type="password" minlength="1" maxlength="1" name="input1" value="" class="input mar" />
-          <input type="password" minlength="1" maxlength="1" name="input2" value=""  class="input mar" />
-          <input type="password" minlength="1" maxlength="1" name="input3" value=""  class="input mar" />
-          <input type="password" minlength="1" maxlength="1" name="input4" value=""  class="input mar" />
-          <input type="password" minlength="1" maxlength="1" name="input5" value=""  class="input mar" />
-          <input type="password" minlength="1" maxlength="1" name="input6" value=""  class="input"/>  -->
-          
-          
-           <input onclick="clickOnOtp()"  id="in" type="password" minlength="1" maxlength="1" name="input1" value="" inputmode="numeric" id="first" class="input mar" onkeyup="moveToNext(this, 'second')" />
+          <input onclick="clickOnOtp()"  id="in" type="password" minlength="1" maxlength="1" name="input1" value="" inputmode="numeric" id="first" class="input mar" onkeyup="moveToNext(this, 'second')" />
           <input type="password" minlength="1" maxlength="1" name="input2" value=""  inputmode="numeric" id="second" class="input mar" disabled onkeyup="moveToNext(this, 'third')" /> 
           <input type="password" minlength="1" maxlength="1" name="input3" value=""  inputmode="numeric" id="third" class="input mar" disabled onkeyup="moveToNext(this, 'fourth')" />
           <input type="password" minlength="1" maxlength="1" name="input4" value=""  inputmode="numeric" id="fourth" class="input mar" disabled onkeyup="moveToNext(this, 'fifth')" /> 
           <input type="password" minlength="1" maxlength="1" name="input5" value=""  inputmode="numeric" id="fifth" class="input mar" disabled onkeyup="moveToNext(this, 'sixth')" />
           <input type="password" minlength="1" maxlength="1" name="input6" value=""  inputmode="numeric" id="sixth" class="input " disabled /> 
-          
-          
        <!--  <input name="OTP" id="OTP" maxlength="7" alt="NUMBWINULL|001|006" value="" type="text" style="visibility:hidden";\>  -->                                       
             </div>              
         <div id="flasher" style="visibility: visible;"> 
